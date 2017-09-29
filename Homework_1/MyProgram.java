@@ -1,20 +1,23 @@
 /**
- *  Interpreter Assignment Comparative Programming Language
- *  This java file is written entirely by me and is the first version.
  *  Author: Kai Li
  *  Date: September 3, 2017
+ *
+ *  Interpreter Assignment, Comparative Programming Language, 
+ *  This java file is written entirely by me and is the first version.
+ * 
  *  That said, there are more functionalities to be added to the interpretor
  *  and more thorough code inspection has to be carried out to pinpoint 
  *  the pivotal errors. Even though the program met all of the homework 
  *  requirements but it does not indicate this program is error-free. 
- *  Many more features can be added to this very basic interpreter. 
+ *  Many more features can be added to this very basic interpreter.
+ *
  *  Disclaimer: any person attempted to copy-paste this Java file is 
  *              subject to total responsibility of academic policy 
  *              at their own institutions. This is only available for 
  *              viewing but not referencing and citing. This file should 
  *              remain as is at all times and is not available for sales 
  *              or reuse since I myself will NOT be responsible for any 
- *              demage incurred through using such program. 
+ *              damage incurred through using such program. 
  * */
 import java.io.BufferedReader;
 import java.io.FileReader;
