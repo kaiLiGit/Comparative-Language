@@ -13,7 +13,7 @@
  *
  *  Disclaimer: any person attempted to copy-paste this Java file is 
  *              subject to total responsibility of academic policy 
- *              at their own institutions. This is only available for 
+ *              at his or her institutions. This is only available for 
  *              viewing but not referencing and citing. This file should 
  *              remain as is at all times and is not available for sales 
  *              or reuse since I myself will NOT be responsible for any 
