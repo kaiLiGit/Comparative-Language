@@ -7,9 +7,9 @@
 > dynamic-type in python, and auto-type in C# (using var) 
 
 Homework Description in screen-shots:
-![pic1.png] 
+![alt text] 
 (https://github.com/kaiLiGit/Comparative-Language/blob/master/hw4_c%23_n_python/pic1.png)
-![pic2.png]
+![alt text]
 (https://github.com/kaiLiGit/Comparative-Language/blob/master/hw4_c%23_n_python/pic2.png)
-![pic3.png]
+![alt text]
 (https://github.com/kaiLiGit/Comparative-Language/blob/master/hw4_c%23_n_python/pic3.png)
