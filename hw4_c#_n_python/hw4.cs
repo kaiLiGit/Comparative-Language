@@ -1,5 +1,4 @@
 /*
-	Author: Kai Li
 	Date: October 28, 2017
 	HW4, MergingMail, retrieving column name and corresponding column values	from .tsv files and substitute all the "tagged" values in .tmp values 
 	with the relevant values being retrived from .tsv file. 

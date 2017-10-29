@@ -1,4 +1,3 @@
-#	 Author: Kai Li
 #        Date: October 28, 2017
 #
 #        HW4, MergingMail, retrieving column name and corresponding column values
