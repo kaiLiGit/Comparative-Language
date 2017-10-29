@@ -1,3 +1,22 @@
+/*
+	Author: Kai Li
+	Date: October 28, 2017
+	HW4, MergingMail, retrieving column name and corresponding column values	from .tsv files and substitute all the "tagged" values in .tmp values 
+	with the relevant values being retrived from .tsv file. 
+
+	Note the code solution is all my personal work and does not guaranttee
+	completely error-free solution, but it does fulfil the requirement of 
+	this programming language comparison assignment. The same implementation 	of MailMerge is being implemented in both python and c#. The first 
+	langugage promotes simplist approach (i.e. no semicolon and braces but 
+	indentation) whereas the second promotes a combination of Java and C++
+	features. 
+	This program shall remain as is but only for viewing purpose not 
+	for reference of any other use. Anyone attemptted to use or copy 
+	this program by any means should be completely responsible for the 
+	consequences that follow along that demeanor. Disclaimer: I myself 
+	will not be responsible for any demage and violation of academic 
+	instition policy if such program is copied or reused.   
+*/
 using System;
 using System.Linq;
 using System.IO;
