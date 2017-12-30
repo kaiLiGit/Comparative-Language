@@ -1,0 +1,24 @@
+country(italy).
+country(united_states). 
+person(john). 
+person(miriam). 
+person(caleb). 
+
+citizen(john, united_states).
+citizen(miriam, united_states). 
+citizen(caleb, united_states). 
+
+live_in_country(X, Y) :- citizen(X, Y), 
+	            not ab(d_live_in_country(X, Y)),
+		    not -live_in_country(X, Y).
+
+ab(d_live_in_country(X, Y)) :- 
+		          citizen(X, Y), 
+			  diplomat(X, Y). 
+
+live_in_country(john, italy). 
+diplomat(miriam, united_states). 
+
+-live_in_country(X, Y1) :- live_in_country(X, Y2), 
+			   country(Y1), 
+			   Y1 != Y2.

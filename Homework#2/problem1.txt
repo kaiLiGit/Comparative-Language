@@ -1,0 +1,204 @@
+person(male1).
+
+person(male2).
+
+person(male3).
+
+person(male4).
+
+person(male5).
+
+person(male6).
+
+person(male7).
+person(male8).
+
+
+
+person(female1).
+
+person(female2).
+
+person(female3).
+
+person(female4).
+
+person(female5).
+
+person(female6).
+
+person(female7).
+
+person(female8).
+
+person(female9).
+
+person(female10).
+
+
+
+sex(male).
+
+sex(female).
+
+
+
+sex_of(male1,male).
+
+sex_of(male2,male).
+
+sex_of(male3,male).
+
+sex_of(male4,male).
+
+sex_of(male5,male).
+
+sex_of(male6,male).
+
+sex_of(male7,male).
+
+
+sex_of(male8,male).
+
+
+
+sex_of(female1,female).
+sex_of(female2,female).
+
+sex_of(female3,female).
+
+sex_of(female4,female).
+
+sex_of(female5,female).
+
+sex_of(female6,female).
+
+sex_of(female7,female).
+
+sex_of(female8,female).
+
+sex_of(female9,female).
+
+
+sex_of(female10,female).
+
+married(male1, female1). 	% male1 and female1 are married
+
+mother(female1, male2). 	% female1 is the mother of male2
+
+father(male1, male2). 		% male1 is the father of male2
+
+mother(female1, male3).
+
+father(male1, male3).
+
+mother(female1, female2).
+
+father(male1, female2).
+
+
+
+married(male2, female3).
+
+mother(female3, male4).
+
+father(male2, male4).
+
+mother(female3, male8).
+
+father(male2, male8).
+
+
+
+married(male3, female4).
+
+mother(female4, female5).
+
+father(male3, female5).
+
+mother(female4, male5).
+
+father(male3, male5).
+
+
+
+married(male6, female2).
+
+
+
+married(male4, female6).
+
+mother(female6, female7).
+
+father(male4, female7).
+
+mother(female6, male7).
+
+father(male4, male7).
+
+
+
+married(male8, female8).
+
+mother(female8, female9).
+
+father(male8, female9).
+
+
+
+married(male6, female2).
+
+married(male7, female10).
+
+% TODO: write your rules here
+% Make sure to say that "married" is a symmetric relation.
+married(X, Y) :- married(Y, X). 
+
+% REMEMBER TO DO MARRIAGE SYMMETRY
+
+
+% define parent
+parent(X, Y) :- father(X, Y). 
+parent(X, Y) :- mother(X, Y). 
+
+% define sibling 
+% sibling(X, Y) :- parent(Z, X), parent(Z, Y), x != Y.
+
+% define sister
+sister(X, Y) :- sex_of(X, female), father(Z, X), father(Z, Y), X != Y, 
+		mother(J, X), mother(J, Y). 
+
+% define brother 
+brother(X, Y) :- sex_of(X, male), father(Z, X), father(Z, Y), X != Y, 
+		 mother(J, X), mother(J, Y). 
+
+
+% define aunt
+aunt(X, Y) :- sex_of(X, female), 
+	      parent(P, Y), 
+	      sister(X, P).
+
+% aunt status gains through marriage (one's parent's brother's wife)
+aunt(X, Y) :- sex_of(X, female), 
+	      uncle(U, Y), 
+	      married(X, U).
+
+% define uncle 
+uncle(X, Y) :- sex_of(X, male),	
+	       parent(P, Y),
+	       brother(X, P). 
+
+
+% uncle status gains through marriage (one's parent's sister's husband) 
+uncle(X, Y) :- sex_of(X, male), 
+	       aunt(A, Y),
+	       married(X, A).		      
+
+% define great uncle 
+great_uncle(X, Y) :- parent(A, Y),	
+		     uncle(X, A). 
+
+% define great aunt 
+great_aunt(X, Y) :- parent(A, Y),
+		    aunt(X, A). 
+		    
